@@ -1,0 +1,77 @@
+/* Define the styles for the scrolling class */
+.scrolling {
+  scroll-behavior: smooth 1s ease-in-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+/* Define the animation for the scrolling class */
+@keyframes smoothScroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+.navbar {
+position: fixed !important;
+top: 50% !important;
+transform: translateY(-50%) !important;
+right: 20px !important;
+z-index: 9999 !important;
+display: flex !important;
+flex-direction: column !important;
+justify-content: center !important;
+align-items: flex-end !important;
+height: 80vh !important;
+transition: opacity 0.2s ease-in-out !important;
+font-family: sans-serif !important;
+color: #fff !important;
+}
+
+.navbar:hover {
+opacity: 1 !important;
+}
+
+.navbar ul {
+list-style: none !important;
+margin: 0 !important;
+padding: 0 !important;
+}
+
+.navbar li {
+font-size: 18px !important;
+font-weight: bold !important;
+margin: 15px 0 !important;
+position: relative !important;
+cursor: pointer !important;
+transition: color 0.2s ease-in-out !important;
+text-shadow: 1px 1px #000;
+}
+
+.navbar li:hover {
+color: #fff !important;
+text-shadow: 1px 1px #000;
+}
+
+.navbar li:before {
+content: '' !important;
+position: absolute !important;
+bottom: -2px !important;
+left: 0 !important;
+width: 0% !important;
+height: 2px !important;
+background-color: #44D7A8 !important;
+transition: width 0.2s ease-in-out !important;
+}
+
+.navbar li:hover:before {
+width: 100% !important;
+}
+
+@media only screen and (max-width: 1030px) {
+  .navbar {
+    display: none !important;
+  }
+}
